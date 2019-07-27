@@ -1,62 +1,62 @@
 var wrestlers = [
     {
         "name":"Minoru Suzuki",
-        "photo":"",
+        "photo":"https://github.com/Mrrwmix/FriendFinder/blob/master/assets/suzuki.gif?raw=true",
         "scores":[3,1,3,1,4,5,2,2,5,3]
     },
     {
         "name":"Io Shirai",
-        "photo":"",
+        "photo":"https://github.com/Mrrwmix/FriendFinder/blob/master/assets/ioshirai.gif?raw=true",
         "scores":[2,2,4,2,3,3,3,3,5,4]
     },
     {
         "name":"Kairi",
-        "photo":"",
+        "photo":"https://github.com/Mrrwmix/FriendFinder/blob/master/assets/kairi.gif?raw=true",
         "scores":[3,4,3,4,2,2,4,3,3,5]
     },
     {
         "name":"Okada",
-        "photo":"",
+        "photo":"https://github.com/Mrrwmix/FriendFinder/blob/master/assets/okada.gif?raw=true",
         "scores":[5,4,5,4,4,2,4,4,3,3]
     },
     {
         "name":"Orange Cassidy",
-        "photo":"",
+        "photo":"https://github.com/Mrrwmix/FriendFinder/blob/master/assets/orange.gif?raw=true",
         "scores":[1,5,5,3,3,1,4,1,1,1]
     },
     {
         "name":"Will Ospreay",
-        "photo":"",
+        "photo":"https://github.com/Mrrwmix/FriendFinder/blob/master/assets/ospreay.gif?raw=true",
         "scores":[3,3,3,4,3,1,5,2,4,5]
     },
     {
         "name":"Kevin Owens",
-        "photo":"",
+        "photo":"https://github.com/Mrrwmix/FriendFinder/blob/master/assets/ko.gif?raw=true",
         "scores":[5,1,4,1,2,4,1,5,5,2]
     },
     {
         "name":"John Cena",
-        "photo":"",
+        "photo":"https://github.com/Mrrwmix/FriendFinder/blob/master/assets/cena.gif?raw=true",
         "scores":[2,4,5,4,4,1,4,5,1,2]
     },
     {
         "name":"Stone Cold Steve Austin",
-        "photo":"",
+        "photo":"https://github.com/Mrrwmix/FriendFinder/blob/master/assets/stonecold.gif?raw=true",
         "scores":[2,1,5,1,3,3,1,5,5,3]
     },
     {
         "name":"The Rock",
-        "photo":"",
+        "photo":"https://github.com/Mrrwmix/FriendFinder/blob/master/assets/therock.gif?raw=true",
         "scores":[4,3,5,2,5,2,3,5,3,3]
     },
     {
         "name":"Jericho",
-        "photo":"",
+        "photo":"https://github.com/Mrrwmix/FriendFinder/blob/master/assets/jericho.gif?raw=true",
         "scores":[4,3,5,3,5,3,2,5,3,4]
     },
     {
         "name":"Pentagon Jr.",
-        "photo":"",
+        "photo":"https://github.com/Mrrwmix/FriendFinder/blob/master/assets/pentagon.gif?raw=true",
         "scores":[3,2,4,2,4,4,3,3,4,4]
     }
 ]

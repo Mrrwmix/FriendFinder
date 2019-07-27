@@ -5,14 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Survey</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../../assets/bootstrap.min.css"
-    />
     <link rel="stylesheet" href="/bootstrap.min.css" />
     <script src="https://kit.fontawesome.com/b2b4a4bb36.js"></script>
     <script src="/jquery-3.4.1.min.js"></script>
+    <script src="/bootstrap.bundle.js"></script>
   </head>
   <body
     class="bg-secondary"
@@ -546,14 +542,35 @@
               </div>
             </div>
             <button
-              type="submit"
               id="submit"
               class="btn-block btn btn-dark my-5"
+              data-toggle="modal"
+              data-target="#results"
             >
               Submit
             </button>
           </form>
         </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="results" tabindex="-1" role="dialog" aria-labelledby="results" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Your Pro Wrestler Friend: <span id="friend"></span></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
       </div>
     </div>
   </body>
@@ -578,6 +595,8 @@
           }
         }
         console.log(theFriend);
+        $("#friend").text(`${theFriend.name}`);
+        $(".modal-body").html(`<img alt='${theFriend.name}'src='${theFriend.photo}' class='img-fluid'>`);
     })
       $("input").val('');
       $("input").prop("checked", false);

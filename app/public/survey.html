@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="/bootstrap.min.css" />
     <script src="https://kit.fontawesome.com/b2b4a4bb36.js"></script>
+    <script src="/jquery-3.4.1.min.js"></script>
   </head>
   <body
     class="bg-secondary"
@@ -596,4 +597,30 @@
       </div>
     </div>
   </body>
+  <script>
+    // #greed, #kind, #charisma, #resp, #narc, #evil, #trust, #talk, #violent, #energy
+    $("body").on("click","#submit", function(e){
+      e.preventDefault();
+      var newObj = {"name":$("#name").val(), "photo":$("#pic").val(), "scores":[$("#greed").val(),$("#kind").val(),$("#charisma").val(),$("#resp").val(),$("#narc").val(),$("#evil").val(),$("#trust").val(),$("#talk").val(),$("#violent").val(),$("#energy").val()]};
+      console.log(newObj);
+      var theFriend;
+      var bestMatchDiff = 100;
+      $.ajax({url: '/api/friends', method: 'GET', }).then(function(data){
+        for (var i = 0; i < data.length; i++){
+          var totalDiff = 0;
+          for (var j = 0; j < newObj["scores"].length; j++){
+            totalDiff += Math.abs(newObj["scores"][j] - data[i]["scores"][j]);
+          }
+          console.log(`${totalDiff} is total diff and ${bestMatchDiff} is the lowest so far`);
+          if (totalDiff < bestMatchDiff){
+            bestMatchDiff = totalDiff;
+            theFriend = data[i];
+          }
+        }
+        console.log(theFriend);
+    })
+      
+    })
+
+  </script>
 </html>

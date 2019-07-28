@@ -5,7 +5,9 @@ module.exports = app => {
     res.json(friends);
   });
   app.post('/api/friends', function(req, res) {
-    friends.push(req.body);
+    if (/(http(s?):)|([/|.|\w|\s])*\.(?:jpg|gif|png)/.test(req.body.photo)) {
+      friends.push(req.body);
+    }
     res.send(friends);
   });
 };

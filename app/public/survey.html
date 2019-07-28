@@ -1,357 +1,677 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Survey</title>
+    <link rel="stylesheet" href="/bootstrap.min.css" />
+    <script src="https://kit.fontawesome.com/b2b4a4bb36.js"></script>
+    <script src="/jquery-3.4.1.min.js"></script>
+    <script src="/bootstrap.bundle.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Survey</title>
-  <link rel="stylesheet" href="/bootstrap.min.css" />
-  <script src="https://kit.fontawesome.com/b2b4a4bb36.js"></script>
-  <script src="/jquery-3.4.1.min.js"></script>
-  <script src="/bootstrap.bundle.js"></script>
-</head>
-
-<body class="bg-secondary" style="font-family:Verdana, Geneva, Tahoma, sans-serif">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 text-light">
-        <h1 class="text-center text-dark"><strong>Survey</strong></h1>
-        <hr class="mt-2" />
+  <body
+    class="bg-secondary"
+    style="font-family:Verdana, Geneva, Tahoma, sans-serif"
+  >
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-light">
+          <h1 class="text-center text-dark">
+            <strong><i class="fas fa-clipboard-list"></i> Survey</strong>
+          </h1>
+          <hr class="mt-2" />
+        </div>
       </div>
-    </div>
-    <div class="row p-2">
-      <div class="col-md-12 text-light">
-        <h2 class="text-left text-dark">
-          <strong>About you</strong>
-        </h2>
-      </div>
-      <div class="col-md-12 text-light">
-        <form>
-          <div class="form-group">
-            <label for="name">Name: </label><input type="text" required id="name" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label for="name">Picture: </label><input type="text" required id="pic" class="form-control" />
-          </div>
-          <hr />
+      <div class="row p-2">
+        <div class="col-md-12 text-light">
           <h2 class="text-left text-dark">
-            <strong>Rate Your Personality Traits</strong>
+            <strong><i class="fas fa-running"></i> About you</strong>
           </h2>
-          <div class="text-center mt-4" id="greed">
-            <h4 class="text-center">Greedy</h4>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="greed" value="1" />
-              <label class="form-check-label">Strongly Disagree</label>
+        </div>
+        <div class="col-md-12 text-light">
+          <form>
+            <div class="form-group">
+              <label for="name">Name: </label
+              ><input type="text" required id="name" class="form-control" />
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="greed" value="2" />
-              <label class="form-check-label">Disagree</label>
+            <div class="form-group">
+              <label for="name">Picture: </label
+              ><input type="text" required id="pic" class="form-control" />
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="greed" value="3" />
-              <label class="form-check-label">Neutral</label>
+            <hr />
+            <h2 class="text-left text-dark">
+              <strong
+                ><i class="fas fa-theater-masks"></i> Rate Your Personality
+                Traits</strong
+              >
+            </h2>
+            <div class="text-center mt-4" id="greed">
+              <h4 class="text-center">Greedy</h4>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="greed"
+                  value="1"
+                />
+                <label class="form-check-label">Strongly Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="greed"
+                  value="2"
+                />
+                <label class="form-check-label">Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="greed"
+                  value="3"
+                />
+                <label class="form-check-label">Neutral</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="greed"
+                  value="4"
+                />
+                <label class="form-check-label">Agree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  required
+                  type="radio"
+                  name="greed"
+                  value="5"
+                />
+                <label class="form-check-label">Strongly Agree</label>
+              </div>
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="greed" value="4" />
-              <label class="form-check-label">Agree</label>
+            <div class="text-center mt-4" id="kind">
+              <h4 class="text-center">Kind</h4>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="kind"
+                  value="1"
+                />
+                <label class="form-check-label">Strongly Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="kind"
+                  value="2"
+                />
+                <label class="form-check-label">Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="kind"
+                  value="3"
+                />
+                <label class="form-check-label">Neutral</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="kind"
+                  value="4"
+                />
+                <label class="form-check-label">Agree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  required
+                  type="radio"
+                  name="kind"
+                  value="5"
+                />
+                <label class="form-check-label">Strongly Agree</label>
+              </div>
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" required type="radio" name="greed" value="5" />
-              <label class="form-check-label">Strongly Agree</label>
+            <div class="text-center mt-4" id="charisma">
+              <h4 class="text-center">Charismatic</h4>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="charisma"
+                  value="1"
+                />
+                <label class="form-check-label">Strongly Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="charisma"
+                  value="2"
+                />
+                <label class="form-check-label">Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  required
+                  name="charisma"
+                  value="3"
+                />
+                <label class="form-check-label">Neutral</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="charisma"
+                  value="4"
+                />
+                <label class="form-check-label">Agree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="charisma"
+                  value="5"
+                />
+                <label class="form-check-label">Strongly Agree</label>
+              </div>
             </div>
-          </div>
-          <div class="text-center mt-4" id="kind">
-            <h4 class="text-center">Kind</h4>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="kind" value="1" />
-              <label class="form-check-label">Strongly Disagree</label>
+            <div class="text-center mt-4" id="resp">
+              <h4 class="text-center">Respectful to Authority</h4>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="resp"
+                  value="1"
+                />
+                <label class="form-check-label">Strongly Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  required
+                  type="radio"
+                  name="resp"
+                  value="2"
+                />
+                <label class="form-check-label">Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="resp"
+                  value="3"
+                />
+                <label class="form-check-label">Neutral</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="resp"
+                  value="4"
+                />
+                <label class="form-check-label">Agree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="resp"
+                  value="5"
+                />
+                <label class="form-check-label">Strongly Agree</label>
+              </div>
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="kind" value="2" />
-              <label class="form-check-label">Disagree</label>
+            <div class="text-center mt-4" id="narc">
+              <h4 class="text-center">Narcissistic</h4>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="narc"
+                  value="1"
+                />
+                <label class="form-check-label">Strongly Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="narc"
+                  value="2"
+                />
+                <label class="form-check-label">Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="narc"
+                  value="3"
+                />
+                <label class="form-check-label">Neutral</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="narc"
+                  value="4"
+                />
+                <label class="form-check-label">Agree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  required
+                  type="radio"
+                  name="narc"
+                  value="5"
+                />
+                <label class="form-check-label">Strongly Agree</label>
+              </div>
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="kind" value="3" />
-              <label class="form-check-label">Neutral</label>
+            <div class="text-center mt-4" id="evil">
+              <h4 class="text-center">Evil</h4>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="evil"
+                  value="1"
+                />
+                <label class="form-check-label">Strongly Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="evil"
+                  value="2"
+                />
+                <label class="form-check-label">Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="evil"
+                  value="3"
+                />
+                <label class="form-check-label">Neutral</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="evil"
+                  value="4"
+                />
+                <label class="form-check-label">Agree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  required
+                  type="radio"
+                  name="evil"
+                  value="5"
+                />
+                <label class="form-check-label">Strongly Agree</label>
+              </div>
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="kind" value="4" />
-              <label class="form-check-label">Agree</label>
+            <div class="text-center mt-4" id="trust">
+              <h4 class="text-center">Trustworthy</h4>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="trust"
+                  value="1"
+                />
+                <label class="form-check-label">Strongly Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="trust"
+                  value="2"
+                />
+                <label class="form-check-label">Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="trust"
+                  value="3"
+                />
+                <label class="form-check-label">Neutral</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  required
+                  name="trust"
+                  value="4"
+                />
+                <label class="form-check-label">Agree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="trust"
+                  value="5"
+                />
+                <label class="form-check-label">Strongly Agree</label>
+              </div>
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" required type="radio" name="kind" value="5" />
-              <label class="form-check-label">Strongly Agree</label>
+            <div class="text-center mt-4" id="talk">
+              <h4 class="text-center">Talkative</h4>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="talk"
+                  value="1"
+                />
+                <label class="form-check-label">Strongly Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="talk"
+                  value="2"
+                />
+                <label class="form-check-label">Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  required
+                  type="radio"
+                  name="talk"
+                  value="3"
+                />
+                <label class="form-check-label">Neutral</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="talk"
+                  value="4"
+                />
+                <label class="form-check-label">Agree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="talk"
+                  value="5"
+                />
+                <label class="form-check-label">Strongly Agree</label>
+              </div>
             </div>
-          </div>
-          <div class="text-center mt-4" id="charisma">
-            <h4 class="text-center">Charismatic</h4>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="charisma" value="1" />
-              <label class="form-check-label">Strongly Disagree</label>
+            <div class="text-center mt-4" id="violent">
+              <h4 class="text-center">Violent</h4>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="violent"
+                  value="1"
+                />
+                <label class="form-check-label">Strongly Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="violent"
+                  value="2"
+                />
+                <label class="form-check-label">Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="violent"
+                  value="3"
+                />
+                <label class="form-check-label">Neutral</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="violent"
+                  value="4"
+                />
+                <label class="form-check-label">Agree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  required
+                  class="form-check-input"
+                  type="radio"
+                  name="violent"
+                  value="5"
+                />
+                <label class="form-check-label">Strongly Agree</label>
+              </div>
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="charisma" value="2" />
-              <label class="form-check-label">Disagree</label>
+            <div class="text-center mt-4" id="energy">
+              <h4 class="text-center">Energetic</h4>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="energy"
+                  value="1"
+                />
+                <label class="form-check-label">Strongly Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  required
+                  class="form-check-input"
+                  type="radio"
+                  name="energy"
+                  value="2"
+                />
+                <label class="form-check-label">Disagree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="energy"
+                  value="3"
+                />
+                <label class="form-check-label">Neutral</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="energy"
+                  value="4"
+                />
+                <label class="form-check-label">Agree</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="energy"
+                  value="5"
+                />
+                <label class="form-check-label">Strongly Agree</label>
+              </div>
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" required name="charisma" value="3" />
-              <label class="form-check-label">Neutral</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="charisma" value="4" />
-              <label class="form-check-label">Agree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="charisma" value="5" />
-              <label class="form-check-label">Strongly Agree</label>
-            </div>
-          </div>
-          <div class="text-center mt-4" id="resp">
-            <h4 class="text-center">Respectful to Authority</h4>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="resp" value="1" />
-              <label class="form-check-label">Strongly Disagree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" required type="radio" name="resp" value="2" />
-              <label class="form-check-label">Disagree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="resp" value="3" />
-              <label class="form-check-label">Neutral</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="resp" value="4" />
-              <label class="form-check-label">Agree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="resp" value="5" />
-              <label class="form-check-label">Strongly Agree</label>
-            </div>
-          </div>
-          <div class="text-center mt-4" id="narc">
-            <h4 class="text-center">Narcissistic</h4>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="narc" value="1" />
-              <label class="form-check-label">Strongly Disagree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="narc" value="2" />
-              <label class="form-check-label">Disagree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="narc" value="3" />
-              <label class="form-check-label">Neutral</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="narc" value="4" />
-              <label class="form-check-label">Agree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" required type="radio" name="narc" value="5" />
-              <label class="form-check-label">Strongly Agree</label>
-            </div>
-          </div>
-          <div class="text-center mt-4" id="evil">
-            <h4 class="text-center">Evil</h4>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="evil" value="1" />
-              <label class="form-check-label">Strongly Disagree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="evil" value="2" />
-              <label class="form-check-label">Disagree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="evil" value="3" />
-              <label class="form-check-label">Neutral</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="evil" value="4" />
-              <label class="form-check-label">Agree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" required type="radio" name="evil" value="5" />
-              <label class="form-check-label">Strongly Agree</label>
-            </div>
-          </div>
-          <div class="text-center mt-4" id="trust">
-            <h4 class="text-center">Trustworthy</h4>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="trust" value="1" />
-              <label class="form-check-label">Strongly Disagree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="trust" value="2" />
-              <label class="form-check-label">Disagree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="trust" value="3" />
-              <label class="form-check-label">Neutral</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" required name="trust" value="4" />
-              <label class="form-check-label">Agree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="trust" value="5" />
-              <label class="form-check-label">Strongly Agree</label>
-            </div>
-          </div>
-          <div class="text-center mt-4" id="talk">
-            <h4 class="text-center">Talkative</h4>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="talk" value="1" />
-              <label class="form-check-label">Strongly Disagree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="talk" value="2" />
-              <label class="form-check-label">Disagree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" required type="radio" name="talk" value="3" />
-              <label class="form-check-label">Neutral</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="talk" value="4" />
-              <label class="form-check-label">Agree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="talk" value="5" />
-              <label class="form-check-label">Strongly Agree</label>
-            </div>
-          </div>
-          <div class="text-center mt-4" id="violent">
-            <h4 class="text-center">Violent</h4>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="violent" value="1" />
-              <label class="form-check-label">Strongly Disagree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="violent" value="2" />
-              <label class="form-check-label">Disagree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="violent" value="3" />
-              <label class="form-check-label">Neutral</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="violent" value="4" />
-              <label class="form-check-label">Agree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="violent" value="5" />
-              <label class="form-check-label">Strongly Agree</label>
-            </div>
-          </div>
-          <div class="text-center mt-4" id="energy">
-            <h4 class="text-center">Energetic</h4>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="energy" value="1" />
-              <label class="form-check-label">Strongly Disagree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="energy" value="2" />
-              <label class="form-check-label">Disagree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="energy" value="3" />
-              <label class="form-check-label">Neutral</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="energy" value="4" />
-              <label class="form-check-label">Agree</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="energy" value="5" />
-              <label class="form-check-label">Strongly Agree</label>
-            </div>
-          </div>
-          <button id="submit" class="btn-block btn btn-dark my-5" data-toggle="modal" data-target="#results">
-            Submit
-          </button>
-        </form>
-      </div>
+            <button
+              id="submit"
+              class="btn-block btn btn-dark my-5"
+              data-toggle="modal"
+              data-target="#results"
+            >
+              <i class="fas fa-clipboard-check"></i>
+              Submit
+            </button>
+          </form>
+        </div>
 
-
-      <!-- Modal -->
-      <div class="modal fade" id="results" tabindex="-1" role="dialog" aria-labelledby="results" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Your Pro Wrestler Friend<span id="s"></span>: <span id="friend"></span></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body text-center">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="results"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="results"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">
+                  Your Pro Wrestler Friend<span id="s"></span>:
+                  <span id="friend"></span>
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body text-center"></div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row static-bottom bg-dark text-light">
-      <div class="col-md-12 text-center py-2">
-        <a href="/api/friends"><button class="btn btn-light rounded-pill text-center mx-3">
-            View API Friends List
-          </button></a>
-        <a href="/home"><button class="btn btn-light rounded-pill text-center mx-3">
-            Home
-          </button> </a>
+      <div class="row static-bottom bg-dark text-light">
+        <div class="col-md-12 text-center py-2">
+          <a href="/api/friends"
+            ><button class="btn btn-light rounded-pill text-center mx-3">
+              <i class="fab fa-js-square"></i>
+              View API Friends List
+            </button></a
+          >
+          <a href="/home"
+            ><button class="btn btn-light rounded-pill text-center mx-3">
+              <i class="fas fa-home"></i>
+              Home
+            </button>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</body>
-<script>
-  $("body").on("click", "#submit", function (e) {
-    e.preventDefault();
-    var newObj = { "name": $("#name").val(), "photo": $("#pic").val(), "scores": [$("#greed input:radio:checked").val(), $("#kind input:radio:checked").val(), $("#charisma input:radio:checked").val(), $("#resp input:radio:checked").val(), $("#narc input:radio:checked").val(), $("#evil input:radio:checked").val(), $("#trust input:radio:checked").val(), $("#talk input:radio:checked").val(), $("#violent input:radio:checked").val(), $("#energy input:radio:checked").val()] };
-    var wrestlers = [];
-    var bestMatchDiff = 100;
-    $.ajax({ url: '/api/friends', method: 'GET' }).then(function (data) {
-      for (var i = 0; i < data.length; i++) {
-        var totalDiff = 0;
-        for (var j = 0; j < newObj["scores"].length; j++) {
-          totalDiff += Math.abs(newObj["scores"][j] - data[i]["scores"][j]);
+  </body>
+  <script>
+    $('body').on('click', '#submit', function(e) {
+      e.preventDefault();
+      var newObj = {
+        name: $('#name').val(),
+        photo: $('#pic').val(),
+        scores: [
+          $('#greed input:radio:checked').val(),
+          $('#kind input:radio:checked').val(),
+          $('#charisma input:radio:checked').val(),
+          $('#resp input:radio:checked').val(),
+          $('#narc input:radio:checked').val(),
+          $('#evil input:radio:checked').val(),
+          $('#trust input:radio:checked').val(),
+          $('#talk input:radio:checked').val(),
+          $('#violent input:radio:checked').val(),
+          $('#energy input:radio:checked').val()
+        ]
+      };
+      var wrestlers = [];
+      var bestMatchDiff = 100;
+      $.ajax({ url: '/api/friends', method: 'GET' }).then(function(data) {
+        for (var i = 0; i < data.length; i++) {
+          var totalDiff = 0;
+          for (var j = 0; j < newObj['scores'].length; j++) {
+            totalDiff += Math.abs(newObj['scores'][j] - data[i]['scores'][j]);
+          }
+          if (totalDiff < bestMatchDiff) {
+            bestMatchDiff = totalDiff;
+            wrestlers = [];
+            wrestlers.push(data[i]);
+          } else if (totalDiff == bestMatchDiff) {
+            wrestlers.push(data[i]);
+          }
         }
-        if (totalDiff < bestMatchDiff) {
-          bestMatchDiff = totalDiff;
-          wrestlers = [];
-          wrestlers.push(data[i]);
+        if (wrestlers.length == 1) {
+          $('#s').text('');
+          $('.modal-body').empty();
+          $('#friend').text(`${wrestlers[0].name}`);
+          $('.modal-body').html(
+            `<img alt='${wrestlers[0].name}'src='${
+              wrestlers[0].photo
+            }' class='img-fluid'>`
+          );
+        } else {
+          $('#s').text(`s`);
+          $('.modal-body').empty();
+          var title = [];
+          for (x in wrestlers) {
+            title.push(wrestlers[x].name);
+            $('.modal-body').append(
+              `<img alt='${wrestlers[x].name}' src='${
+                wrestlers[x].photo
+              }' class='img-fluid my-2'>`
+            );
+          }
+          $('#friend').text(`${title.join(' and ')}`);
         }
-        else if (totalDiff == bestMatchDiff) {
-          wrestlers.push(data[i]);
-        }
-      }
-      if (wrestlers.length == 1) {
-        $("#s").text('');
-        $(".modal-body").empty();
-        $("#friend").text(`${wrestlers[0].name}`);
-        $(".modal-body").html(`<img alt='${wrestlers[0].name}'src='${wrestlers[0].photo}' class='img-fluid'>`);
-      }
-      else {
-        $("#s").text(`s`);
-        $(".modal-body").empty();
-        var title = [];
-        for (x in wrestlers) {
-          title.push(wrestlers[x].name);
-          $(".modal-body").append(`<img alt='${wrestlers[x].name}' src='${wrestlers[x].photo}' class='img-fluid my-2'>`)
-        }
-        $("#friend").text(`${title.join(' and ')}`);
-      }
-      $.ajax({ url: 'api/friends', method: 'POST', data: newObj }).done(function (msg) {
-      })
-    })
+        $.ajax({ url: 'api/friends', method: 'POST', data: newObj }).done(
+          function(msg) {}
+        );
+      });
 
-    $("input").prop("checked", false);
-    $("#name").val('');
-    $("#pic").val('');
-  })
-
-</script>
-
+      $('input').prop('checked', false);
+      $('#name').val('');
+      $('#pic').val('');
+    });
+  </script>
 </html>

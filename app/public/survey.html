@@ -17,13 +17,13 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12 text-light">
-          <h1 class="text-center">Survey</h1>
+          <h1 class="text-center text-dark"><strong>Survey</strong></h1>
           <hr class="mt-2" />
         </div>
       </div>
       <div class="row p-2">
         <div class="col-md-12 text-light">
-          <h2 class="text-left">
+          <h2 class="text-left text-dark">
             <strong>About you</strong>
           </h2>
         </div>
@@ -38,7 +38,7 @@
               ><input type="text" required id="pic" class="form-control" />
             </div>
             <hr />
-            <h2 class="text-left">
+            <h2 class="text-left text-dark">
               <strong>Rate Your Personality Traits</strong>
             </h2>
             <div class="text-center mt-4" id="greed">
@@ -558,7 +558,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Your Pro Wrestler Friend: <span id="friend"></span></h5>
+          <h5 class="modal-title">Your Pro Wrestler Friend<span id="s"></span>: <span id="friend"></span></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -572,6 +572,16 @@
     </div>
   </div>
       </div>
+      <div class="row static-bottom bg-dark text-light">
+        <div class="col-md-12 text-center py-2">
+          <a href="/api/friends"><button class="btn btn-light rounded-pill text-center mx-3">
+              View API Friends List
+            </button></a>
+            <a href="/home"><button class="btn btn-light rounded-pill text-center mx-3">
+                Home
+              </button> </a>
+            </div>     
+          </div>
     </div>
   </body>
   <script>
@@ -579,27 +589,48 @@
     $("body").on("click","#submit", function(e){
       e.preventDefault();
       var newObj = {"name":$("#name").val(), "photo":$("#pic").val(), "scores":[$("#greed input:radio:checked").val(),$("#kind input:radio:checked").val(),$("#charisma input:radio:checked").val(),$("#resp input:radio:checked").val(),$("#narc input:radio:checked").val(),$("#evil input:radio:checked").val(),$("#trust input:radio:checked").val(),$("#talk input:radio:checked").val(),$("#violent input:radio:checked").val(),$("#energy input:radio:checked").val()]};
-      console.log(newObj);
-      var theFriend;
+      var wrestlers = [];
       var bestMatchDiff = 100;
-      $.ajax({url: '/api/friends', method: 'GET', }).then(function(data){
+      $.ajax({url: '/api/friends', method: 'GET'}).then(function(data){
         for (var i = 0; i < data.length; i++){
           var totalDiff = 0;
           for (var j = 0; j < newObj["scores"].length; j++){
             totalDiff += Math.abs(newObj["scores"][j] - data[i]["scores"][j]);
           }
-          console.log(`${totalDiff} is total diff and ${bestMatchDiff} is the lowest so far`);
           if (totalDiff < bestMatchDiff){
             bestMatchDiff = totalDiff;
-            theFriend = data[i];
+            wrestlers = [];
+            wrestlers.push(data[i]);
+          }
+          else if (totalDiff == bestMatchDiff){
+            wrestlers.push(data[i]);
           }
         }
-        console.log(theFriend);
-        $("#friend").text(`${theFriend.name}`);
-        $(".modal-body").html(`<img alt='${theFriend.name}'src='${theFriend.photo}' class='img-fluid'>`);
+        if (wrestlers.length == 1){
+          $("#s").text('');
+          $(".modal-body").empty();
+          $("#friend").text(`${wrestlers[0].name}`);
+          $(".modal-body").html(`<img alt='${wrestlers[0].name}'src='${wrestlers[0].photo}' class='img-fluid'>`);
+        }
+        else {
+          $("#s").text(`s`);
+          $(".modal-body").empty();
+          var title = [];
+          for (x in wrestlers){
+            title.push(wrestlers[x].name);
+            $(".modal-body").append(`<img alt='${wrestlers[x].name}' src='${wrestlers[x].photo}' class='img-fluid my-2'>`)
+          }
+          $("#friend").text(`${title.join(' and ')}`);
+        }
+        console.log(newObj);
+    $.ajax({url:'api/friends', method: 'POST', data: newObj}).done(function(msg){
+      console.log(msg);
     })
-      $("input").val('');
+    })
+
       $("input").prop("checked", false);
+      $("#name").val('');
+      $("#pic").val('');
     })
 
   </script>
